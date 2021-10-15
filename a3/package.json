@@ -1,0 +1,25 @@
+{
+  "name": "restaurantapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Marc Nicolas Oliva",
+  "license": "ISC",
+  "dependencies": {
+    "@react-leaflet/core": "^1.0.2",
+    "bootstrap": "^4.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "leaflet": "^1.7.1",
+    "mongoose": "^6.0.6",
+    "query-string": "^7.0.1",
+    "react-bootstrap": "^1.6.4",
+    "react-leaflet": "^3.1.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.3.0"
+  }
+}
