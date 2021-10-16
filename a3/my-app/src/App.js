@@ -3,24 +3,24 @@ import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import React, { useEffect, useState } from "react";
 
-import Restaurants from './Restaurants';
-import Restaurant from './Restaurant';
-import About from './About';
-import NotFound from './NotFound';
+import Restaurants from './components/Restaurants';
+import Restaurant from './components/Restaurant';
+import About from './components/About';
+import NotFound from './components/NotFound';
 
 import './App.css';
 
+
 function App() {
   const [ searchString, setSearchString ] = useState("");
-  
-  handleSubmit((e) => {
-      e.preventDefault();
+  let history = useHistory();
 
-      let history = useHistory();
-      history.push(`/restaurants?borough=${searchString}`);
-      searchString = "";
-    }
-  );
+  function handleSubmit(e){
+    e.preventDefault(); 
+    history.push(`/restaurants?borough=${searchString}`);
+    setSearchString("");
+  }
+
   return (
   <>
     <Navbar bg="light" expand="lg">
@@ -45,7 +45,7 @@ function App() {
     </Navbar>
     <Container>
       <Row>
-        <Column>
+        <Col>
           <Switch>
             <Route exact path='/'>
               <Restaurants />
@@ -56,10 +56,14 @@ function App() {
             <Route exact path='/Restaurants'>
               <Restaurants />
             </Route>
-            <Route path='/Restaurant/:id'>
+            <Route exact path='/Restaurant/:id'>
+              <Restaurant />
+            </Route>
+            <Route path=''>
+              <NotFound />
             </Route>
           </Switch>
-        </Column>
+        </Col>
       </Row>
     </Container>
       <br />
