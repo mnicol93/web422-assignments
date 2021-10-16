@@ -8,7 +8,7 @@ function Restaurant(){
     const [sRestaurant, setRestaurant] = useState({});
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
-    console.log(sRestaurant);
+
     useEffect(()=>{
         setLoading(true);
         fetch(`http://web422-a1-mno.herokuapp.com/api/restaurants/${id}`)
@@ -23,13 +23,13 @@ function Restaurant(){
 
         setLoading(false);
     }, [id]);
-console.log(sRestaurant);
+
     return(
         <Container>
         <Card style={{ width: '100%' }}>
             <Card.Body>
                 <Card.Title>{sRestaurant.name}</Card.Title>
-                <Card.Text>{sRestaurant.address.building} </Card.Text>
+                <Card.Text></Card.Text>
             </Card.Body>
         </Card> 
         {/* <MapContainer style={{"height": "400px"}} center={[sRestaurant.address.coord[1], sRestaurant.address.coord[0]]} zoom={13} scrollWheelZoom={false}>
