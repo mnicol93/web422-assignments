@@ -5,7 +5,7 @@ import { Card, CardDeck, Container, Table } from 'react-bootstrap';
 
 
 function Restaurant(){
-    const [sRestaurant, setRestaurant] = useState({});
+    const [sRestaurant, setRestaurant] = useState(null);
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
@@ -28,13 +28,13 @@ function Restaurant(){
         <Container>
         <Card style={{ width: '100%' }}>
             <Card.Body>
-                <Card.Title>{sRestaurant.name}</Card.Title>
+                <Card.Title>{sRestaurant?.name}</Card.Title>
                 <Card.Text></Card.Text>
             </Card.Body>
         </Card> 
-        {/* <MapContainer style={{"height": "400px"}} center={[sRestaurant.address.coord[1], sRestaurant.address.coord[0]]} zoom={13} scrollWheelZoom={false}>
+        {/* <MapContainer style={{"height": "400px"}} center={[sRestaurant.address?.coord[1], sRestaurant?.address?.coord[0]]} zoom={13} scrollWheelZoom={false}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[sRestaurant.address.coord[1], sRestaurant.address.coord[0]]}></Marker>
+            <Marker position={[sRestaurant?.address?.coord[1], sRestaurant?.address?.coord[0]]}></Marker>
         </MapContainer> */}
       </Container>
 

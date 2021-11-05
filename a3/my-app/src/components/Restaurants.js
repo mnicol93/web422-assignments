@@ -11,7 +11,7 @@ import queryString from 'query-string';
 function Restaurants(){
 
     let location = useLocation();
-    const [ restaurants, setRestaurants ] = useState([]);
+    const [ restaurants, setRestaurants ] = useState(null);
     const [ page, setPage ] = useState(1);
     let history = useHistory();
     let url = `http://web422-a1-mno.herokuapp.com/api/restaurants?page=${page}&perPage=10`;
