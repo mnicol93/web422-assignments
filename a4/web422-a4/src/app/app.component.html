@@ -18,7 +18,7 @@
     <button mat-button [matMenuTriggerFor]="userMenu">
       <mat-icon>person</mat-icon>
       <span fxShow fxHide.xs>
-        User Name
+        Marc Nicolas Oliva
       </span>
     </button>
     <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
@@ -46,7 +46,7 @@
         </div>
 
 
-        <a mat-list-item >
+        <a mat-list-item routerLink="/newReleases" >
           <mat-icon mat-list-icon>
             library_music
           </mat-icon>
@@ -62,11 +62,11 @@
 
         <mat-divider></mat-divider>
 
-        <a id="push-bottom" mat-list-item >
+        <a id="push-bottom" mat-list-item routerLink="/about">
           <mat-icon mat-list-icon>
             info_outline
           </mat-icon>
-          <p mat-line> About </p>
+          <p mat-line> About</p>
         </a>
       </mat-nav-list>
 
@@ -75,7 +75,7 @@
     <mat-sidenav-content class="sidenav-content">
       
       <!-- Main content -->
-      <app-new-releases-component></app-new-releases-component>
+      <router-outlet></router-outlet>
       <!-- ------------ -->
       
       <div class="bottom-spacer"></div>
@@ -83,4 +83,4 @@
   </mat-sidenav-container>
 </div>
 
-<router-outlet></router-outlet>
+

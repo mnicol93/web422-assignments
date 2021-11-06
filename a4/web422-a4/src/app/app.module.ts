@@ -21,6 +21,7 @@ import { AboutComponentComponent } from './views/about-component/about-component
 import { NotFoundComponentComponent } from './views/not-found-component/not-found-component.component';
 import { NewReleasesComponentComponent } from './views/new-releases-component/new-releases-component.component';
 import { ArtistDiscographyComponentComponent } from './views/artist-discography-component/artist-discography-component.component';
+import { AlbumComponentComponent } from './views/album-component/album-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { ArtistDiscographyComponentComponent } from './views/artist-discography-
     NotFoundComponentComponent,
     NewReleasesComponentComponent,
     ArtistDiscographyComponentComponent,
-    
+    AlbumComponentComponent
   ],
   imports: [
     BrowserModule,
